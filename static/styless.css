@@ -1,0 +1,555 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Menú */
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #FFFDFC;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #FFFDFC;
+    display: block;
+    font-weight: 600;
+}
+
+.menu .navbar ul li a:hover {
+    color: #CE967B;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+/* Contenido de la cabecera */
+.header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(uploads/bg.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.header-content {
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 75px;
+    line-height: 80px;
+    color: #F9FAFC;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+.header-content p {
+    font-size: 16px;
+    color: #C5C5C5;
+    padding: 250px;
+    margin-bottom: 25px;
+}
+
+.btn-1 {
+    display: inline-block;
+    padding: 11px 35px;
+    background-color: #CE9678;
+    color: #F9FAFC;
+    text-transform: uppercase;
+}
+
+.btn-1:hover {
+    background-color: #ebad8d;
+}
+
+/* Contenido de Coffee */
+.coffee {
+    padding: 100px 0;
+    background-color: #E1E2E6;
+}
+
+.coffee-content {
+    text-align: center;
+}
+
+.coffee-content h2 {
+    font-size: 55px;
+    line-height: 70px;
+    color: #323337;
+    text-transform: uppercase;
+    padding: 0 250px;
+    margin-bottom: 15px;
+}
+
+.txt-p {
+    font-size: 16px;
+    color: #414247;
+    padding: 0 250px;
+    margin-bottom: 35px;
+}
+
+.coffee-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.coffee-1 {
+    padding: 0 25px;
+}
+
+.coffee-1 img {
+    width: 200px;
+}
+
+.coffee-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.coffee-1 h3 {
+    color: #323337;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* Contenido de servicios */
+.services {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(uploads/bg3.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 100px 0;
+}
+
+.services-content {
+    text-align: center;
+}
+
+.services-content h2 {
+    font-size: 55px;
+    line-height: 70px;
+    color: #F9FAFC;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.services-content p {
+    font-size: 16px;
+    color: #C5C5C5;
+    margin-bottom: 50px;
+    padding: 0 100px;
+}
+
+.services-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.services-1 {
+    padding: 0 100px;
+}
+
+.services-1 img {
+    width: 25px;
+    margin-bottom: 15px;
+}
+
+.services-1 h3 {
+    color: #EACCB3;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* Contenido General */
+.general {
+    display: flex;
+}
+
+.general-1 {
+    width: 50%;
+    padding: 100px 250px 100px 100px;
+    background-color: #E1E2E6;
+}
+
+.general-2,
+.general-3 {
+    background-size: cover;
+    width: 50%;
+}
+
+.general-2 {
+    background-image: url(uploads/coffe-1.jpg);
+    background-position: center center;
+}
+
+.general-3 {
+    background-image: url(uploads/coffee-2.jpg);
+    background-position: center center;
+}
+
+h2 {
+    font-size: 55px;
+    line-height: 70px;
+    color: #323337;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    color: #414247;
+    margin: 25px 0 45px 0;
+}
+
+/* Contenido de Blog */
+.blog {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.blog-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog-1 {
+    padding: 15px 55px;
+}
+
+.blog-1 img {
+    width: 250px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.blog-1 h3 {
+    font-size: 25px;
+    color: #323337;
+}
+
+/* Contenido del pie de página */
+.footer {
+    padding: 100px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link h3 {
+    font-size: 18px;
+    color: #F9FAFC;
+    margin-bottom: 15px;
+}
+
+.link a {
+    font-size: 16px;
+    color: #C5C5C5;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
+    .menu {
+        padding: 30px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #323337;
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked + .navbar {
+        display: initial;
+    }
+
+    .header {
+        min-height: 0vh;
+    }
+
+    .header-content {
+        padding: 100px 30px;
+    }
+
+    .header-content p {
+        padding: 0;
+    }
+
+    .coffee {
+        padding: 30px;
+    }
+
+    .coffee-content h2 {
+        padding: 0;
+    }
+
+    .txt-p {
+        padding: 0;
+    }
+
+    .coffee-group {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .coffee-img {
+        display: none;
+    }
+
+    .services {
+        padding: 30px;
+    }
+
+    .services-content p {
+        padding: 0;
+    }
+
+    .services-group {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .services-1 {
+        margin-bottom: 25px;
+    }
+
+    .general {
+        flex-direction: column;
+    }
+
+    .general-1 {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .general-2,
+    .general-3 {
+        display: none;
+    }
+
+    .blog {
+        padding: 30px;
+    }
+
+    .blog-content {
+        flex-direction: column;
+    }
+
+    .blog-1 {
+        padding: 0;
+    }
+
+    .footer {
+        padding: 30px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* Estilos para el formulario de carga de imágenes y los botones */
+.services-content form {
+    margin-bottom: 20px;
+}
+
+.services-content input[type="file"] {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.services-content button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #CE9678;
+    color: #FFFDFC;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.services-content button[type="submit"]:hover {
+    background-color: #ebad8d;
+}
+
+.text-results {
+    margin-top: 20px;
+}
+
+.text-results ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.text-results ul li {
+    margin-bottom: 5px;
+}
+
+/* Estilos para el input de tipo archivo */
+.modal-content form input[type="file"] {
+    display: block;
+    margin: 100px auto; /* Centrar verticalmente y horizontalmente */
+    padding: 10px; /* Añadir relleno alrededor del campo */
+    border: 2px solid #CE9678; /* Añadir un borde alrededor del campo */
+    background-color: transparent; /* Fondo transparente */
+    color: #555; /* Color del texto */
+    font-size: 16px; /* Tamaño del texto */
+    border-radius: 5px; /* Añadir bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+  }
+  
+  /* Cambiar el estilo cuando se pase el cursor por encima */
+  .modal-content form input[type="file"]:hover {
+    background-color: #f5f5f5; /* Cambiar el fondo al pasar el cursor por encima */
+  }
+  /* Estilos personalizados para el input de tipo archivo */
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+
+
+  .image-container {
+    flex: 0 0 45%; /* Establecer el ancho deseado */
+    padding: 20px; /* Espaciado interior */
+    border: 1px solid #ccc; /* Borde para el recuadro */
+    border-radius: 5px; /* Bordes redondeados para el contenedor */
+    margin: 10px; /* Margen alrededor del contenedor */
+    overflow: hidden; /* Ocultar cualquier parte de la imagen que se extienda más allá del contenedor */
+}
+
+.image-container img {
+    max-width: 80%; /* Ajustar imagen al contenedor */
+    height: auto; /* Ajustar altura automáticamente */
+    display: block; /* Asegurar que la imagen no tenga espacios innecesarios */
+    margin: 0 auto; /* Centrar la imagen horizontalmente */
+    border-radius: 15px; /* Bordes redondeados para la imagen */
+}
+
+.result-container {
+    overflow: auto; /* Añadir barra de desplazamiento en caso de ser necesario */
+}
+
+table {
+    width: 80%; /* Reducir el ancho de la tabla si es necesario */
+    margin: 20px auto; /* Centrar la tabla horizontalmente y agregar margen superior e inferior */
+    border-collapse: collapse; /* Colapsar los bordes de la tabla */
+    border-radius: 10px; /* Bordes redondeados para la tabla */
+    overflow: hidden; /* Ocultar cualquier contenido que sobresalga de la tabla */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave para la tabla */
+}
+
+table th,
+table td {
+    padding: 10px; /* Espaciado interno de celda */
+    border-bottom: 1px solid #ccc; /* Borde inferior de celda */
+    text-align: center; /* Centrar el texto dentro de las celdas */
+}
+
+table th {
+    background-color: #f2f2f2; /* Color de fondo para encabezados de tabla */
+}
+
+/* Aplicar estilos alternativos a las celdas de la tabla */
+table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Color de fondo para filas pares */
+}
+
+table tr:nth-child(odd) {
+    background-color: #ffffff; /* Color de fondo para filas impares */
+}
+
+
+.text-results {
+    margin-top: 20px;
+}
+
+.text-results h3 {
+    font-size: 58px; /* Tamaño de fuente más grande */
+    font-weight: bold; /* Texto en negrita */
+    margin-bottom: 10px; /* Espacio inferior para separar de la lista */
+    color: #FFFFFF; /* Color blanco */
+}
+
+
+.text-results ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.text-results ul li {
+    margin-bottom: 10px;
+    font-size: 48px; /* Tamaño de fuente más grande para los elementos de la lista */
+    color: #FFFFFF; /* Color blanco */
+}

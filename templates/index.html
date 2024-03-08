@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header class="header">
+        <div class="menu container">
+            <a href="#" class="logo">Logo</a>
+            <input type="checkbox" id="menu" />
+            <label for="menu">
+                <img src="uploads/menu.png" class="menu-icono" alt="">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Morales</a></li>
+                    <li><a href="#">Salazar</a></li>
+                    <li><a href="#">Suquillo</a></li>
+                    <li><a href="#">Felix</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-content container">
+            <h1>LectoImagen</h1>
+            <p>
+                La mejor IA para transladar imagenes hecha por estudiantes de Software
+                </p>
+            <a href="#" class="btn-1">Inicio</a>
+        </div>
+    </header>
+    <main>
+        <section class="coffee">
+            <img class="coffee-img" src="uploads/bg2.png" alt="">
+            <div class="coffee-content container">
+                <h2>Lector de texto en imagen</h2>
+                <p class="txt-p">
+                    Realiza tu escaneo de texto gratis!
+                    </p>
+                <div class="coffee-group">
+                    <div class="coffee-1">
+                        <img src="uploads/c1.png" alt="">
+                        <h3>Intenta!</h3>
+                        <p>
+                            Puedes subir cualquier imagen textual y sacara tu texto muy rapido
+                        </p>
+                    </div>
+                    <div class="coffee-1">
+                        <img src="uploads/c2.png" alt="">
+                        <h3>Saca frases!</h3>
+                        <p>
+
+                        Puedes tambien sacar frases desde las de transito hasta frases de la internet                        </p>
+                    </div>
+                    <div class="coffee-1">
+                        <img src="uploads/c3.png" alt="">
+                        <h3>Español, ingles, Portugues, Aleman</h3>
+                        <p>
+                            Puedes sacar texto en estos idiomas! Asombroso
+                        </p>
+                    </div>
+                </div>
+                <a href="#" class="btn-1">Inicio</a>
+            </div>
+        </section>
+        <!-- Aquí se integra el formulario de carga de imágenes y los resultados -->
+        <section class="services">
+            <div class="services-content container">
+                <h2>Carga tu preciada IMAGEN!</h2>
+                <!-- Formulario de carga de imágenes -->
+                <form action="/analyze" method="post" enctype="multipart/form-data">
+                    <input type="file" name="file" placeholder="Imagen: solo jpg, png, tiff" class="form-control form-jaided" required id="id_file">
+                    <button type="submit">Analizar Imagen</button>
+                </form>
+                {% if error %}
+                    <p class="error">{{ error }}</p>
+                {% endif %}
+                <!-- Resultados -->
+                {% if text_results %}
+                <div class="text-results">
+                    <h3>Resultados</h3>
+                    <ul>
+                        {% for text_result in text_results %}
+                            <li>{{ text_result }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+            </div>
+        </section>
+        <!-- Fin de la integración del formulario y los resultados -->
+
+        <!-- Las siguientes secciones permanecen sin cambios -->
+        <section class="services">
+            <div class="services-content container">
+                <h2>IDIOMAS ADICIONALES</h2>
+                <div class="services-group">
+                    <div class="services-1">
+                        <img src="uploads/i1.svg" alt="">
+                        <h3>PORTUGUES</h3>
+                    </div>
+                    <div class="services-1">
+                        <img src="uploads/i2.svg" alt="">
+                        <h3>INGLES</h3>
+                    </div>
+                    <div class="services-1">
+                        <img src="uploads/i3.svg" alt="">
+                        <h3>ALEMAN</h3>
+                    </div>
+                </div>
+                <p>
+                    Diversas fuentes de imagenes por internet!
+                </p>
+                <a href="#" class="btn-1">Informacion</a>
+            </div>
+        </section>
+        <section class="general">
+            <div class="general-1">
+                <h2>GENERA</h2>
+                <p>
+                    Tambien podras generar tu reporte de las frases con su dato de confianza
+                </p>
+                <a href="#" class="btn-1">Informacion</a>
+            </div>
+            <div class="general-2"></div>
+        </section>
+        <section class="general">
+            <div class="general-3"></div>
+            <div class="general-1">
+                <h2>Alguna vez te has preguntando la facilidad con la que se pueden sacar textos</h2>
+                <p>
+                    Desde fotos caseras, hasta imagenes domestas, retratos que contengan textos esta IA las sacaran 
+                </p>
+                <a href="#" class="btn-1">Informacion</a>
+            </div>
+        </section>
+        <section class="blog container">
+            <h2>Beneficios</h2>
+            <p>Por medio de la tecnología de reconocimiento OCR podrás transcribir cualquier texto que encuentra en una imagen.</p>
+            <div class="blog-content">
+                <div class="blog-1">
+                    <img src="uploads/blog1.jpg" alt="">
+                    <p>
+                    Esto te facilitará la tarea de estar escribiendo textos de imagenes por tu propia cuenta                    </p>
+                </div>
+                <div class="blog-1">
+                    <img src="uploads/blog2.jpg" alt="">
+                    <p>
+                    Además podrás visualizar los resultados  palabra por palabra con su nivel de confianza.
+                                    </p>
+                </div>
+                <div class="blog-1">
+                    <img src="uploads/blog3.jpg" alt="">
+                    <h3>Te invitamos... 3</h3>
+                    <p>
+                        Prueba nuestro reconocedor de texto así podrás experimentar todo lo que te ofrecemos.                    </p>
+                </div>
+            </div>
+            <a href="#" class="btn-1">Informacion</a>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-content container">
+            <div class="link">
+                <h3>ESPE</h3>
+                <ul>
+                    <li><a href="#">Univerisdad de las fuerzas Armadas ESPE</a></li>
+                </ul>
+            </div>
+            <div class="link">
+                <h3>IA</h3>
+                <ul>
+                    <li><a href="#">APLICACIONES BASADAS EN EL CONOCIMIENTO</a></li>
+        
+                </ul>
+            </div>
+            <div class="link">
+                <h3>Sonia Cardenas</h3>
+                <ul>
+                    <li><a href="#">15035</a></li>
+    
+                </ul>
+            </div>
+            <div class="link">
+                <h3>Integrantes</h3>
+                <ul>
+                    <li><a href="#">MORALES</a></li>
+                    <li><a href="#">FELIX</a></li>
+                    <li><a href="#">SUQUILLO</a></li>
+                    <li><a href="#">SALAZAR</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
